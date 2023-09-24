@@ -6,7 +6,7 @@ export const Form = ({ onSubmit }) => {
   const [number, setNumber] = useState('');
 
   const handleChange = event => {
-    const { name, value } = event.target;
+    const { name, number } = event.currentTarget;
     switch (name) {
       case 'name':
         setName(name);
