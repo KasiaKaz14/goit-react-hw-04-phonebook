@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import css from './Form.module.css';
 
 export const Form = ({ onSubmit, onChange }) => {
