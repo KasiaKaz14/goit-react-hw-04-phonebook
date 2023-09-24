@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import css from './ContactList.module.css';
 
-export const ContactList = ({ contacts, onChange }) => {
+export const ContactList = ({ contacts, onClick }) => {
   const [search, setSearch] = useState('');
   const handleChange = e => {
     setSearch(e.target.value);
