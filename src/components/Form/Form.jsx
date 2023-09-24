@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import css from './From.module.css';
+import css from './Form.module.css';
 
 export const Form = ({ onSubmit }) => {
   const [name, setName] = useState('');
@@ -20,21 +20,13 @@ export const Form = ({ onSubmit }) => {
     }
   };
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    onSubmit(name, number);
-    setName('');
-    setNumber('');
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={onSubmit}>
       <label className={css.label}>
-        Name Name
+        Name
         <input
           type="text"
           name="name"
-          value={name}
           onChange={handleChange}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
@@ -45,7 +37,6 @@ export const Form = ({ onSubmit }) => {
         <input
           type="tel"
           name="number"
-          value={name}
           onChange={handleChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
