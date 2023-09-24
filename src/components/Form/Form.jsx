@@ -9,11 +9,11 @@ export const Form = ({ onSubmit }) => {
     const { name, value } = event.target;
     switch (name) {
       case 'name':
-        setName(value);
+        setName(name);
         break;
 
       case 'number':
-        setNumber(value);
+        setNumber(number);
         break;
       default:
         break;
