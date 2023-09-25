@@ -1,4 +1,5 @@
 import css from './Form.module.css';
+import PropTypes from 'prop-types';
 
 export const Form = ({ onSubmit, onChange }) => {
   return (
@@ -30,4 +31,8 @@ export const Form = ({ onSubmit, onChange }) => {
       </label>
     </form>
   );
+};
+
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };

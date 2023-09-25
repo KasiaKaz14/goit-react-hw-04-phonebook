@@ -48,7 +48,7 @@ export function App() {
     );
   };
 
-  const handleFilterChange = evt => {
+  const findContacts = evt => {
     setFilter(evt.target.value);
   };
 
@@ -80,7 +80,7 @@ export function App() {
       <h1>Phonebook</h1>
       <Form onSubmit={handleSubmit} />
       <h2>Contacts</h2>
-      <Filter onChange={handleFilterChange} filter={filter} />
+      <Filter onChange={findContacts} filter={filter} />
       <ContactList onClick={handleDelete} contacts={filterSearch} />
     </div>
   );

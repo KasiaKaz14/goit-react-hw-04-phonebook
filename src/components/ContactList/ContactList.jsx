@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import css from './ContactList.module.css';
+import PropTypes from 'prop-types';
 
 export const ContactList = ({ contacts, onClick }) => {
   const [search, setSearch] = useState('');
@@ -28,4 +29,9 @@ export const ContactList = ({ contacts, onClick }) => {
       </ul>
     </div>
   );
+};
+
+ContactList.propTypes = {
+  contacts: PropTypes.array,
+  onClick: PropTypes.func.isRequired,
 };
