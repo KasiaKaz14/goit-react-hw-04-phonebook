@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const ContactList = ({ contacts, onClick }) => {
   return (
     <div>
-      {contacts.length && (
+      {contacts.length ? (
         <ul className={css.list}>
           {contacts.map(contact => (
             <li className={css.listItem} key={contact.id}>
@@ -18,7 +18,7 @@ export const ContactList = ({ contacts, onClick }) => {
             </li>
           ))}
         </ul>
-      )}
+      ) : null}
     </div>
   );
 };
