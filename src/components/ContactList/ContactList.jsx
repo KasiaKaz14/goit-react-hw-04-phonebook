@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const ContactList = ({ contacts, onClick }) => {
   return (
     <div>
-      {contacts && (
+      {contacts.length && (
         <ul className={css.list}>
           {contacts.map(contact => (
             <li className={css.listItem} key={contact.id}>
